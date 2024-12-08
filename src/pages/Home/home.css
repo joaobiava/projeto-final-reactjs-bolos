@@ -1,0 +1,54 @@
+/* Header */
+.location {
+    font-size: 14px;
+    color: #6c757d;
+    margin-bottom: 0;
+  }
+  
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .cart-icon button {
+    font-size: 24px;
+    color: #000;
+  }
+  
+  /* Search Bar */
+  .search-bar input {
+    border-radius: 0;
+  }
+  
+  .search-bar button {
+    border-radius: 0;
+  }
+  
+  /* Categories */
+  .categories button {
+    flex: 1;
+    margin: 0 5px;
+  }
+  
+  /* Products */
+  .card img {
+    height: 150px;
+    object-fit: cover;
+  }
+  
+  .card-title {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .card-text {
+    color: #6c757d;
+  }
+  
+  /* Footer */
+  .footer {
+    font-size: 24px;
+    justify-content: space-around;
+  }
+  

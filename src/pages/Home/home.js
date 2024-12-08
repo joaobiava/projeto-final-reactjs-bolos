@@ -1,66 +1,86 @@
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import './home.css';
 
-function Home() {
-  return (
-    <div>
-      <h1 className="text-center my-4">Bem-vindo à Loja de Bolos de Pote!</h1>
+// Importando imagens
+import boloBonito from "../../components/images/boloDePoteBonito.png";
+import mauroLurde from "../../components/images/MauroELurde.png";
+import rico from "../../components/images/boloDeRico.png";
+import galinhaPintuda from "../../components/images/GalinhaPintuda.png";
+import unicornio from "../../components/images/boloDeUnicornio.png";
+import feinho from "../../components/images/fein.png";
 
-      {/* Carrossel */}
-      <div id="boloCarrossel" className="carousel slide">
-        <div className="carousel-inner">
-          <div className="carousel-item active">
-            <img src="https://via.placeholder.com/800x400?text=Bolo+de+Chocolate" className="d-block w-100" alt="Bolo de Chocolate" />
-          </div>
-          <div className="carousel-item">
-            <img src="https://via.placeholder.com/800x400?text=Bolo+de+Morango" className="d-block w-100" alt="Bolo de Morango" />
-          </div>
-          <div className="carousel-item">
-            <img src="https://via.placeholder.com/800x400?text=Bolo+de+Limão" className="d-block w-100" alt="Bolo de Limão" />
-          </div>
-        </div>
-        <button className="carousel-control-prev" type="button" data-bs-target="#boloCarrossel" data-bs-slide="prev">
-          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span className="visually-hidden">Anterior</span>
-        </button>
-        <button className="carousel-control-next" type="button" data-bs-target="#boloCarrossel" data-bs-slide="next">
-          <span className="carousel-control-next-icon" aria-hidden="true"></span>
-          <span className="visually-hidden">Próximo</span>
-        </button>
+export const products = [
+  { id: 1, name: "Bolo de pote bonito", price: 57, image: boloBonito, description: "Um bolo decorado, delicioso e visualmente incrível!" },
+  { id: 2, name: "Bolo de pote feio", price: 25, image: feinho, description: "Um bolo prático e econômico para o dia a dia." },
+  { id: 3, name: "Bolo galinha pintuda", price: 38, image: galinhaPintuda, description: "Perfeito para festas infantis, com tema da Galinha Pintuda." },
+  { id: 4, name: "Bolo Mauro e Lurde", price: 41, image: mauroLurde, description: "Inspirado nos chefs Mauro e Lurde, sabor único." },
+  { id: 5, name: "Bolo de rico", price: 69, image: rico, description: "Se você não sabe mais onde gastar seu dinheiro, compre este bolo." },
+  { id: 6, name: "Bolo de chifrudo", price: 14, image: unicornio, description: "Fofo e mágico, ideal para quem quer um bolo chifrudo." },
+];
+
+function Home() {
+  // Estado para busca e produtos filtrados
+  const [searchTerm, setSearchTerm] = useState("");
+  const [filteredProducts, setFilteredProducts] = useState(products);
+
+  // Função para atualizar a lista de produtos com base na busca
+  const handleSearch = (e) => {
+    const value = e.target.value.toLowerCase();
+    setSearchTerm(value);
+
+    // Filtra produtos que contenham o termo buscado
+    const filtered = products.filter((product) =>
+      product.name.toLowerCase().includes(value)
+    );
+    setFilteredProducts(filtered);
+  };
+
+  return (
+    <div className="container mt-4">
+      {/* Barra de Busca */}
+      <div className="search-bar d-flex mt-3">
+        <input
+          type="text"
+          className="form-control"
+          placeholder="Buscar customização..."
+          value={searchTerm}
+          onChange={handleSearch}
+        />
       </div>
 
-      {/* Bolos Mais Escolhidos */}
-      <div className="container my-5">
-        <h2 className="text-center mb-4">Bolos Mais Escolhidos</h2>
-        <div className="row">
-          <div className="col-md-4">
-            <div className="card">
-              <img src="https://via.placeholder.com/300x200?text=Bolo+Prestígio" className="card-img-top" alt="Bolo Prestígio" />
-              <div className="card-body">
-                <h5 className="card-title">Bolo Prestígio</h5>
-                <p className="card-text">Chocolate com coco, o favorito dos nossos clientes!</p>
+      {/* Lista de Produtos */}
+      <div className="products row mt-4">
+        {filteredProducts.length > 0 ? (
+          filteredProducts.map((product) => (
+            <div className="col-md-4 col-sm-6 mb-4" key={product.id}>
+              <div className="card">
+                {/* Clique na imagem leva para detalhes */}
+                <Link to={`/detalhes/${product.id}`} state={product}>
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    className="card-img-top"
+                  />
+                </Link>
+                <div className="card-body">
+                  <h5 className="card-title">{product.name}</h5>
+                  <p className="card-text">R$ {product.price}</p>
+                  {/* Botão leva para detalhes */}
+                  <Link
+                    to={`/detalhes/${product.id}`}
+                    state={product}
+                    className="btn btn-primary w-100"
+                  >
+                    Ver Detalhes
+                  </Link>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="col-md-4">
-            <div className="card">
-              <img src="https://via.placeholder.com/300x200?text=Bolo+de+Cenoura" className="card-img-top" alt="Bolo de Cenoura" />
-              <div className="card-body">
-                <h5 className="card-title">Bolo de Cenoura</h5>
-                <p className="card-text">A combinação perfeita de cenoura com brigadeiro.</p>
-              </div>
-            </div>
-          </div>
-          <div className="col-md-4">
-            <div className="card">
-              <img src="https://via.placeholder.com/300x200?text=Bolo+de+Limão" className="card-img-top" alt="Bolo de Limão" />
-              <div className="card-body">
-                <h5 className="card-title">Bolo de Limão Siciliano</h5>
-                <p className="card-text">Leve e refrescante, ideal para qualquer momento!</p>
-              </div>
-            </div>
-          </div>
-        </div>
+          ))
+        ) : (
+          <p>Nenhum produto encontrado.</p>
+        )}
       </div>
     </div>
   );
