@@ -1,85 +1,103 @@
-.orders-page {
-  font-family: Arial, sans-serif;
-  padding: 16px;
-  background-color: #ffece0; /* Cor de fundo */
+/* Estrutura Geral */
+.carrinho-container {
+  background-color: #f9f9f9;
+  min-height: 100vh;
+  padding: 0 20px;
+}
+
+.carrinho-header {
   display: flex;
-  flex-direction: column;
-  align-items: center; /* Centraliza o conteúdo horizontalmente */
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
 }
 
-.header {
-  text-align: center;
-  margin-bottom: 16px;
-}
-
-.header p {
-  font-size: 14px;
+.carrinho-titulo {
+  font-weight: bold;
+  color: #000;
   margin: 0;
 }
 
-.header h1 {
-  font-size: 24px;
-  margin: 8px 0;
-}
-
-.search-bar {
-  display: flex;
-  gap: 8px;
-  margin-bottom: 24px;
-  width: 100%;
-  max-width: 600px;
-}
-
-.search-bar input {
-  flex-grow: 1;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-}
-
-.search-bar button {
-  padding: 8px 16px;
-  background-color: #ff5722;
-  color: white;
+.finalizar-btn {
+  background-color: #7b1f20;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 10px;
   border: none;
-  border-radius: 8px;
+  font-size: 16px;
   cursor: pointer;
 }
 
-.orders-list {
-  width: 100%;
-  max-width: 800px; /* Define uma largura máxima para centralizar */
+.finalizar-btn:hover {
+  background-color: #631a1a;
 }
 
-.order-card {
+/* Carrinho Vazio */
+.carrinho-vazio {
+  text-align: center;
+  color: #333;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+/* Lista de Itens */
+.carrinho-lista {
+  margin-top: 20px;
+  padding: 0;
+  list-style: none;
+}
+
+.carrinho-item {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  padding: 15px;
   display: flex;
   align-items: center;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 16px;
-  margin-bottom: 16px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para destaque */
+  gap: 15px;
 }
 
-.order-image {
-  width: 150px;
-  height: 150px;
+/* Imagem do Bolo */
+.item-imagem {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
   object-fit: cover;
-  border-radius: 8px;
-  margin-right: 16px;
 }
 
-.order-details {
-  flex: 1; /* Permite que os detalhes ocupem o espaço restante */
+/* Detalhes do Item */
+.item-detalhes {
+  flex: 1;
 }
 
-.order-details h3 {
-  margin: 0 0 8px;
-  font-size: 20px;
+.item-detalhes strong {
+  font-size: 18px;
+  color: #000;
 }
 
-.order-details p {
-  margin: 4px 0;
+.item-detalhes p {
+  margin: 5px 0;
+  color: #555;
   font-size: 14px;
+}
+
+.item-preco {
+  font-weight: bold;
+  color: #000;
+  font-size: 16px;
+}
+
+/* Total */
+.carrinho-total {
+  text-align: right;
+  margin-top: 20px;
+}
+
+.carrinho-total h3 {
+  font-size: 20px;
+  color: #000;
+  font-weight: bold;
 }

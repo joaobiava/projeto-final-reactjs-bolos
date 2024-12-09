@@ -1,15 +1,111 @@
-.back-arrow {
-    width: 30px; /* Largura da seta */
-    height: auto; /* Ajusta a altura proporcionalmente */
-    cursor: pointer; /* Mostra o cursor de clique */
-    transition: transform 0.2s; /* Animação ao passar o mouse */
-}
+/* Container Geral */
+.product-details-container {
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    background-color: #fdfdfd;
+  }
   
-.back-arrow:hover {
-    transform: scale(1.1); /* Aumenta ligeiramente ao passar o mouse */
-}
-
-.product-image{
-    width: 40%;
+  /* Botão de Voltar */
+  .back-button {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    text-decoration: none;
+  }
+  
+  .back-arrow {
+    width: 24px;
+    height: 24px;
+  }
+  
+  /* Card de Detalhes do Produto */
+  .product-details-card {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Imagem do Produto */
+  .product-image {
+    width: 100%;
     height: auto;
-}
+    border-radius: 15px;
+    margin-bottom: 20px;
+  }
+  
+  /* Informações do Produto */
+  .product-info {
+    text-align: center;
+  }
+  
+  .product-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .product-rating {
+    font-size: 16px;
+    color: #f39c12;
+    margin-bottom: 10px;
+  }
+  
+  .product-description {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .product-price {
+    font-size: 24px;
+    color: #c0392b;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  /* Botão Adicionar ao Carrinho */
+  .add-to-cart-btn {
+    background-color: #8b0000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .add-to-cart-btn:hover {
+    background-color: #a52a2a;
+  }
+  
+  /* Avaliação com Estrelas */
+.product-rating {
+    font-size: 24px;
+    color: #f1c40f;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .star {
+    margin: 0 2px;
+  }
+  
+  .full-star {
+    color: #f1c40f; /* Amarelo para estrelas preenchidas */
+  }
+  
+  .half-star {
+    color: #f1c40f; /* Use o mesmo amarelo para meia estrela */
+    opacity: 0.5;
+  }
+  
+  .empty-star {
+    color: #ccc; /* Cinza para estrelas vazias */
+  }
+  
