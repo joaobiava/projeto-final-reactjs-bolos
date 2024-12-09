@@ -31,15 +31,19 @@ function Login() {
         };
     }, []);
 
+    function goBack() {
+        window.history.back();
+      }
+
 
     return (
         <div id="login-container">
             <nav id="header" className="d-flex navbar bg-white">
                 <div className="container">
                     <a>
-                        <img id="button_back" className="ms-2" src={back_button} />
+                        <img id="button_back" className="ms-2" src={back_button}  onClick={goBack}/>
                     </a>
-                    <h1 id="logo" className="">Bólis</h1>
+                    <h1 id="logo" className=""><Link to="/">Bólis</Link></h1>
                 </div>
             </nav>
             <section className="d-flex justify-content-center">
@@ -74,7 +78,7 @@ function Login() {
 
                     <div className="linha-com-texto">ou entre com</div>
 
-                    <div class="d-flex flex-column align-items-center mt-4">
+                    <div class="d-flex flex-column align-items-center mb-3 mt-4">
                         <a href="#" id="icons-btn" class="btn btn-custom btn-branco my-2">
                             <img src={facebook} class="img-fluid p-1 imagens" width="30" />
                             <span class="ml-2">Continuar com o Facebook</span>
