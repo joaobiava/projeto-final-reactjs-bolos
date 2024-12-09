@@ -1,0 +1,85 @@
+.orders-page {
+  font-family: Arial, sans-serif;
+  padding: 16px;
+  background-color: #ffece0; /* Cor de fundo */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza o conteúdo horizontalmente */
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.header p {
+  font-size: 14px;
+  margin: 0;
+}
+
+.header h1 {
+  font-size: 24px;
+  margin: 8px 0;
+}
+
+.search-bar {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.search-bar input {
+  flex-grow: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.search-bar button {
+  padding: 8px 16px;
+  background-color: #ff5722;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.orders-list {
+  width: 100%;
+  max-width: 800px; /* Define uma largura máxima para centralizar */
+}
+
+.order-card {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para destaque */
+}
+
+.order-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 16px;
+}
+
+.order-details {
+  flex: 1; /* Permite que os detalhes ocupem o espaço restante */
+}
+
+.order-details h3 {
+  margin: 0 0 8px;
+  font-size: 20px;
+}
+
+.order-details p {
+  margin: 4px 0;
+  font-size: 14px;
+}

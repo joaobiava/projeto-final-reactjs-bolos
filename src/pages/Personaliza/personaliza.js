@@ -1,19 +1,29 @@
 import { useState } from "react";
-import './compra.css';
+import { useCart } from "../Carrinho/cartContext"; // Importa o hook
+import './personaliza.css';
 
-function Compra() {
+function Personaliza() {
   const [massa, setMassa] = useState("");
   const [recheio, setRecheio] = useState("");
   const [cobertura, setCobertura] = useState("");
-  const [pedido, setPedido] = useState(null);
+  const { addToCart } = useCart(); // Hook para adicionar ao carrinho
 
   const massas = ["Chocolate", "Baunilha", "Red Velvet", "Laranja"];
   const recheios = ["Brigadeiro", "Doce de Leite", "Creme de Limão", "Coco"];
   const coberturas = ["Ganache", "Chantilly", "Marshmallow", "Calda de Frutas"];
 
   const finalizarPedido = () => {
-    setPedido({ massa, recheio, cobertura });
+    
+    const pedido = { 
+      id: Date.now(), // Usando o timestamp como id único
+      massa, 
+      recheio, 
+      cobertura,
+      preco: 50 // Defina o preço do pedido aqui
+    };
+    addToCart(pedido); // Adiciona o pedido ao carrinho
   };
+  
 
   return (
     <div className="container my-5">
@@ -72,19 +82,8 @@ function Compra() {
       >
         Finalizar Pedido
       </button>
-
-      {/* Resumo do Pedido */}
-      {pedido && (
-        <div className="mt-4 p-3 bg-light border rounded">
-          <h4>Resumo do Pedido:</h4>
-          <p><strong>Massa:</strong> {pedido.massa}</p>
-          <p><strong>Recheio:</strong> {pedido.recheio}</p>
-          <p><strong>Cobertura:</strong> {pedido.cobertura}</p>
-          <p className="text-success"><strong>Seu pedido foi registrado com sucesso!</strong></p>
-        </div>
-      )}
     </div>
   );
 }
 
-export default Compra;
+export default Personaliza;

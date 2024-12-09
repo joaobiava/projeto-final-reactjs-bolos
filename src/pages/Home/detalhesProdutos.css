@@ -1,0 +1,15 @@
+.back-arrow {
+    width: 30px; /* Largura da seta */
+    height: auto; /* Ajusta a altura proporcionalmente */
+    cursor: pointer; /* Mostra o cursor de clique */
+    transition: transform 0.2s; /* Animação ao passar o mouse */
+}
+  
+.back-arrow:hover {
+    transform: scale(1.1); /* Aumenta ligeiramente ao passar o mouse */
+}
+
+.product-image{
+    width: 40%;
+    height: auto;
+}

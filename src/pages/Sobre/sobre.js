@@ -1,13 +1,9 @@
 import './sobre.css';
+import doceria from '../../components/images/fingimento.jpg'
 
 function Sobre() {
   return (
     <div>
-      {/* Cabeçalho */}
-      <header className="bg-warning d-flex flex-column justify-content-center align-items-center py-5 text-center text-white">
-        <h1>Sobre Nós</h1>
-      </header>
-
       {/* Seção Principal */}
       <div className="container my-5">
         <div className="row align-items-center">
@@ -21,9 +17,10 @@ function Sobre() {
           </div>
           <div className="col-md-6">
             <img 
-              src="https://via.placeholder.com/500x300?text=Foto+da+Loja" 
+              src={doceria} 
               alt="Nossa Loja" 
-              className="img-fluid rounded" 
+              className="img-fluid rounded"
+              width="500"
             />
           </div>
         </div>
@@ -60,7 +57,7 @@ function Sobre() {
             <h2>Entre em Contato</h2>
             <p>Estamos aqui para ouvir você. Envie-nos sua dúvida, sugestão ou elogio!</p>
             <a 
-              href="mailto:contato@bolosdepote.com" 
+              href="mailto:"
               className="btn btn-warning text-white mt-3"
             >
               Fale Conosco
