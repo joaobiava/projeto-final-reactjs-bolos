@@ -73,7 +73,8 @@ function Login() {
                             <input type="checkbox" className="form-check-input" id="lembrar" />
                             <label className="form-check-label" for="lembrar">Lembre de mim</label>
                         </div>
-                        <button type="submit" className="btn btn-primary" id="btn-entrar">Entrar</button>
+                        <Link to="/"><button type="submit" className="btn btn-primary" id="btn-entrar">Entrar</button></Link>
+                        
                     </form>
 
                     <div className="linha-com-texto">ou entre com</div>

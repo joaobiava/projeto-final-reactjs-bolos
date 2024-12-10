@@ -83,7 +83,9 @@ function Cadastro() {
 
                         <h6 id="termos-uso" className="mb-3">Ao clicar em Cadastrar você concorda com nossos <Link to="#">Termos de Serviços</Link>  e  <Link to="#">Política de Privacidade</Link></h6>
 
-                        <button type="submit" className="btn btn-primary mb-3" id="btn-cadastrar">Cadastrar</button>
+                        <Link to="/">
+                            <button type="submit" className="btn btn-primary mb-3" id="btn-cadastrar">Cadastrar</button>
+                        </Link>
                     </form>
 
 
