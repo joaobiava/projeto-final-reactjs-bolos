@@ -14,7 +14,7 @@ import sacola from "../../components/images/shopping-bag 1.png";
 export const products = [
   { id: 1, name: "Bolo de pote bonito", price: 57, image: boloBonito, description: "Um bolo decorado, delicioso e visualmente incrível!", rating: 4.3 },
   { id: 2, name: "Bolo de pote feio", price: 25, image: feinho, description: "Um bolo prático e econômico para o dia a dia.", rating: 3.5 },
-  { id: 3, name: "Bolo galinha pintuda", price: 38, image: galinhaPintuda, description: "Perfeito para festas infantis, com tema da Galinha Pintuda.", rating: 4.69 },
+  { id: 3, name: "Bolo de chocolate", price: 38, image: galinhaPintuda, description: "Perfeito para festas infantis, com tema da Galinha Pintuda.", rating: 4.69 },
   { id: 4, name: "Bolo Mauro e Lurde", price: 41, image: mauroLurde, description: "Inspirado nos chefs Mauro e Lurde, sabor único.", rating: 5 },
   { id: 5, name: "Bolo de rico", price: 69, image: rico, description: "Se você não sabe mais onde gastar seu dinheiro, compre este bolo.", rating: 4.5 },
   { id: 6, name: "Bolo de chifrudo", price: 14, image: unicornio, description: "Fofo e mágico, ideal para quem quer um bolo chifrudo.", rating: 2 },
