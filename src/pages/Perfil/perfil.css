@@ -1,0 +1,97 @@
+/* Configuração geral */
+.perfil-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  font-family: Arial, sans-serif;
+}
+
+/* Cabeçalho */
+.perfil-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  background-color: #ffa07a; /* Cor laranja */
+  color: #000;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.perfil-location {
+  font-size: 0.9rem;
+}
+
+.perfil-edit button {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* Informações do usuário */
+.perfil-info {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.perfil-info h1 {
+  font-size: 1.5rem;
+  color: #000;
+}
+
+.perfil-photo img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ffa07a;
+  margin-top: 0.5rem;
+}
+
+/* Opções de conta */
+.perfil-options {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 90%;
+}
+
+.perfil-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem;
+  border: 1px solid #800000; /* Cor bordô */
+  border-radius: 8px;
+  color: #800000;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.perfil-option span {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.perfil-option a {
+  color: #800000;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+/* Rodapé */
+.perfil-footer {
+  text-align: center;
+  padding: 0.5rem;
+  background-color: #800000; /* Cor bordô */
+  color: #fff;
+  font-size: 0.9rem;
+  width: 100%;
+}

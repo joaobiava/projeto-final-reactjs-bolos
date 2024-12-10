@@ -152,6 +152,35 @@
   text-decoration: none;
 }
 
+/* Footer */
+.perfil-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #800000; /* Cor bordô */
+  padding: 0.5rem 0;
+  box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.footer-icon {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.footer-icon:hover {
+  color: #ffa07a; /* Efeito hover na cor laranja */
+}
+
+
 
 /* ajustes para outras telas */
 
@@ -173,5 +202,11 @@
   #form_login {
     margin-top: 2rem;
     width: 40%;
+  }
+}
+
+@media (max-width: 320px) {
+  .footer-icon {
+      font-size: 1.2rem;
   }
 }

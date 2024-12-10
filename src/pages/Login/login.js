@@ -65,7 +65,7 @@ function Login() {
                             <input type="email" className="form-control" id="email" placeholder="exemplo@gmail.com" />
                         </div>
                         <div className="mb-3">
-                            <label for="password" className="form-label">Password</label>
+                            <label for="password" className="form-label">Senha</label>
                             <input type="password" className="form-control" id="password" placeholder="*******" />
                             <div id="esqueci-senha" className="form-text">Esqueci minha senha</div>
                         </div>
