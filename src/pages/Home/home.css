@@ -18,8 +18,20 @@
   
   /* Search Bar */
   .search-bar input {
-    border-radius: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    border-radius: 20px; /* Bordas arredondadas */
+    border: 1px solid #ccc; /* Borda fina */
+    padding: 10px; /* Espaçamento interno */
+    width: 70%; /* Reduz a largura (ajuste conforme necessário) */
+    margin: auto; /* Centraliza horizontalmente */
+    transition: box-shadow 0.3s ease; /* Efeito suave ao focar */
   }
+  
+  .search-bar input:focus {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra mais intensa ao focar */
+    outline: none; /* Remove a borda padrão ao focar */
+  }
+  
   
   .search-bar button {
     border-radius: 0;
@@ -50,5 +62,6 @@
   .footer {
     font-size: 24px;
     justify-content: space-around;
-  }
+  }  
+  
   
